@@ -1,6 +1,10 @@
 /*===========================
 GENERAL STYLES   
 ===========================*/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     background: url("https://s3-alpha-sig.figma.com/img/e384/5cb8/0fc3055b670baa8d80f62f219b949c67?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=X3WZpNdhtALsCa0~LAshid9YH22N-WOuK8k6l53gg2auOVTmsFzU0wo3UWZ-Pdjw~EyoxT4rXOhXomvtEb6i5iSVeQBTyvs4h0vqj8Kze3nGmLlsRrpyAqD6Z2Zw79HnGEdlDb16jeA~D2QqRbimYEol9CBr0o7ROwqhQE9sleMBsL4tBXd~7c7pg4FreE-RncmY8UIY8UUGeIMhMTEX1f1F2XbB6kvpOKy-qo2hHcrXlqMM1OrSPZ4~~rwW~imQ0Dpe0hJ39O~nPFmXUezqkYKWQGJovOJGZRvl18Bc4-M~Vtqp~JL6A9bND1wc7a07QH1oSeu2iMqe2NwlTdIMwg__");
