@@ -1,0 +1,909 @@
+/*===========================
+GENERAL STYLES   
+===========================*/
+body {
+    margin: 0;
+    background: url("https://s3-alpha-sig.figma.com/img/e384/5cb8/0fc3055b670baa8d80f62f219b949c67?Expires=1740960000&Key-Pair-Id=APKAQ4GOSFWCW27IBOMQ&Signature=X3WZpNdhtALsCa0~LAshid9YH22N-WOuK8k6l53gg2auOVTmsFzU0wo3UWZ-Pdjw~EyoxT4rXOhXomvtEb6i5iSVeQBTyvs4h0vqj8Kze3nGmLlsRrpyAqD6Z2Zw79HnGEdlDb16jeA~D2QqRbimYEol9CBr0o7ROwqhQE9sleMBsL4tBXd~7c7pg4FreE-RncmY8UIY8UUGeIMhMTEX1f1F2XbB6kvpOKy-qo2hHcrXlqMM1OrSPZ4~~rwW~imQ0Dpe0hJ39O~nPFmXUezqkYKWQGJovOJGZRvl18Bc4-M~Vtqp~JL6A9bND1wc7a07QH1oSeu2iMqe2NwlTdIMwg__");
+}
+
+.container {
+    width: 100%;
+    max-width: clamp(80%, 11vw, 69%);
+    margin: 0 auto;
+    text-align: center;
+    padding: 0px 15px;
+}
+
+p {
+    font-family: "Open Sans", serif;
+    color: rgba(255, 255, 255, 1);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Bebas Neue", serif;
+    color: rgba(255, 255, 255, 1);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: clamp(33px, 5vw, 80px);
+}
+
+h2 {
+    font-size: clamp(21px, 2vw, 36px);
+}
+
+h3 {
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+p {
+    font-size: clamp(14px, 2vw, 18px);
+}
+
+/* @media only screen and (max-width: 820px) {
+    h1 {
+        font-size: 33px;
+    }
+} */
+
+.general_section li{
+    list-style-type: none;
+}
+
+.general_section a{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.07px; 
+}
+
+/*===========================
+HEADER STYLES   
+===========================*/
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(189.96% 61.18% at 50% 38.82%, rgba(255, 181, 72, 0) 0%, rgba(52, 44, 29, 0.80319) 73.22%, #08090A 99.74%), url(paveiksleliai/main.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.container .navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 29px;
+    flex-wrap: nowrap;
+    max-width: 95vw;
+    margin: 0 auto;
+}
+
+.container .navigation #logo {
+    width: clamp(32px, 8vw, 87px);
+    height: clamp(36px, 8vw, 93px);
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.container .navigation .navigation_options {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: clamp(1%, 5vw, 8%);
+    max-width: clamp(40%, 70vw, 60%);
+}
+
+@media only screen and (max-width: 820px) {
+    .container .navigation .navigation_options {
+        display: none;
+    } 
+}
+
+.container .navigation .navigation_options li {
+    list-style-type: none;
+    display: flex;
+}
+
+.container .navigation .navigation_options li a{
+    font-weight: 700;
+    font-size: clamp(12px, 1.2vw, 14px);
+    line-height: 19.07px;
+    width: fit-content;
+    padding-left: clamp(2px, 0.5vw, 5px);
+    white-space: nowrap;
+}
+
+.container .navigation a:hover {
+    color: rgba(255, 181, 72, 1);
+}
+
+.header .container .navigation .language {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    margin: 0px;
+}
+
+.header .container .navigation .language img {
+    width: 8px;
+    height: 4px;
+    padding-left: 3px;
+}
+
+@media only screen and (max-width: 820px) {
+    .header .container .navigation #steam,
+    .header .container .navigation #xbox {
+        display: none;
+    } 
+}
+
+.header .container .navigation .language .dropdown-content {
+    display: none;  /* Paslepia isskleidžiamaji meniu pagal nutylejima, Dropdown meniu nematomas, kol jo neaktyvuoji */
+    position: absolute;
+    top: 100%;
+    left: -10px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+    padding: 10px 0px 5px 10px;
+    min-width: 55px;
+}
+
+.header .container .navigation .language .dropdown-content li {
+    width: fit-content;
+}
+
+.header .container .navigation .language:focus-within .dropdown-content {
+    display: block; /* Rodo meniu paspaudus pagrindine kalbos nuoroda. Dropdown meniu atsiranda, kai vartotojas paspaudzia ant kalbos pasirinkimo */
+}
+
+.header .container .navigation .line {
+    border: 0.87px solid rgba(255, 255, 255, 1);
+    height: clamp(20px, 3vw, 30px);
+    opacity: 0.5;
+    border-width: clamp(0.5px, 0.9vw, 0.87px);
+    margin: 0px 20px;
+}
+
+/* @media only screen and (max-width: 820px) {
+    .header .container .navigation .line {
+        display: none;
+    } 
+} */
+
+.header .container .navigation #xbox {
+    width: clamp(20px, 3vw, 30px);
+    height: clamp(20px, 3vw, 30px);
+    margin: 0;
+    cursor: pointer;
+}
+
+.header .container .navigation #steam {
+    width: clamp(20px, 3vw, 30px);
+    height: clamp(20px, 3vw, 30px);
+    cursor: pointer;
+}
+
+.header .container .navigation #menu {
+    display: none;
+    width: 23px;
+    height: 17px;
+}
+
+@media only screen and (max-width: 820px) {
+    .header .container .navigation #steam,
+    .header .container .navigation #xbox {
+        display: none;
+    } 
+    .header .container .navigation .language #menu {
+        display:flex;
+    }
+}
+
+.header .container h1 {
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 3px;
+    margin: 17% 0 21px;
+}
+
+.header .container h3 {
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;    
+    margin: 0;
+}
+
+.header .container #buy {
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    padding: 19px 19px 19px 17px;
+    display: inline-block;
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    line-height: 21.79px;    
+    margin: 26px 14px 0px 11px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.header .container .bruksnys {
+    border: 0.87px solid rgba(26, 25, 23, 1);
+    opacity: 50%;
+    margin: 0px 14px 0px 11px;
+}
+
+.header .apacia {
+    position: absolute;
+    bottom: 62px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header .apacia p{
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19.07px;
+    letter-spacing: 10%;
+    margin: 0;
+}
+
+.header .apacia img {
+    width: 20px;
+    height: 8px;
+}
+
+/*===========================
+ABOUT STYLES   
+===========================*/
+.about {
+    background: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%), url("paveiksleliai/about_background.png");
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.about .container {
+    align-self: center;
+}
+
+.about .container .turinys {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 910px) {
+    .about .container .turinys{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+}
+
+.about .container .turinys .text_left {
+    position: relative;
+    width: 45%;
+}
+
+@media only screen and (max-width: 910px) {
+    .about .container .turinys .text_left {        
+        width: 100%;
+    }
+}
+
+.about .container .turinys .text_left h3{
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-align: left;
+    margin: 0px 0px 12px;
+}
+
+.about .container .turinys .text_left h1 {
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 3px;
+    margin: 0px 0px 46px;
+    text-align: left;
+    max-width: 70%;
+}
+
+@media only screen and (max-width: 910px) {
+    .about .container .turinys .text_left h1 {
+        margin: 0;
+    }
+}
+
+.about .container .turinys .text_left hr {
+    max-width: 711px;
+    height: 1.5px;
+    border-radius: 4px;
+    background-color: white;
+    margin: 0;
+}
+
+.about .container .turinys .text_left p {
+    margin: 46px 0px 0px;
+    width: 364px;
+    text-align: justify;
+    margin-right: 74px;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 910px) {
+    .about .container .turinys .text_left p {        
+        width: fit-content;
+        margin: 26px 0px;
+    }
+}
+
+.about .container .turinys .pic_right {
+    max-width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.about .container .turinys .pic_right #trys {
+    width: clamp(250px, 39vw, 637px);
+    height: clamp(290px, 31vw, 600px);
+    object-fit: contain;
+    box-sizing: border-box;
+}
+
+/*===========================
+FEATURES STYLES   
+===========================*/
+.features {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%), url("paveiksleliai/features.png");
+    object-fit: cover;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.features .container {
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+}
+
+.features .container .text {
+    max-width: 413px;
+    text-align: left;
+    margin-right: 70px;
+}
+    
+.features .container .text h3 {
+    margin: 0px 0px 10px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+}
+
+.features .container .text h1 {
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 3px;
+    margin: 0px 0px 67px;
+}
+
+.features .container .text .tekstas_su_valdymu {
+    padding-left: 40px;
+}
+
+.features .container .text .tekstas_su_valdymu h2 {
+    color: rgba(255, 181, 72, 1);
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.features .container .text .tekstas_su_valdymu p {
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0px;
+    margin: 0;
+    text-align: justify;
+}
+
+.features #survive {
+    margin-bottom: 9px;
+}
+
+.features #create {
+    margin: 24px 0px 36px;
+}
+
+.features .container .text .tekstas_su_valdymu {
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center; */
+}
+
+.features .container .text .tekstas_su_valdymu .valdymas {
+    padding: 10px 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.features .container .text .tekstas_su_valdymu .baltas_ratukas {
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+}
+
+.features .container .text .tekstas_su_valdymu .balta_linija {
+    height: 117px;
+    width: 2px;
+    background-color: white;
+}
+
+.features .container .text .tekstas_su_valdymu .pirmas_tuscias {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;   
+    margin-bottom: 58px; 
+}
+
+.features .container .text .tekstas_su_valdymu .antras_tuscias {
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;    
+}
+
+/*===========================
+REQUIREMENTS STYLES   
+===========================*/
+.requirements {
+    background: radial-gradient(33.94% 46.58% at 70.14% 64.4%, rgba(255, 255, 255, 0) 3.36%, rgba(0, 0, 0, 0) 19.22%, #080A0B 99.74%), url(paveiksleliai/requirements.png);
+    width: 100%;
+    min-height: 100vh;
+    padding-top: clamp(45px, 10vw, 145px);
+}
+
+.requirements .container .text h3 {
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 0px 0px 8px;
+}
+
+.requirements .container .text h1 {
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 3px;
+    margin: 0px 0px 133px;
+}
+
+ .requirements .container table {
+    background: url(paveiksleliai/table.png);
+    text-align: left;
+    max-width: 575px;
+}
+
+.requirements .container table tr td {
+    color: rgba(255, 255, 255, 1);
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    line-height: 22px;
+    height: 130px;
+    padding-left: 20px;
+}
+
+.requirements .container table span {
+    color: rgba(255, 181, 72, 1);
+    text-transform: uppercase;
+    font-family: "Bebas Neue", serif;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+} 
+
+.table {
+    position: relative;
+    width: 575px;
+    padding: 20px;
+    background-color: black;
+    border: none;
+}
+
+.table::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(paveiksleliai/requirements.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    pointer-events: none; /* Kad SVG rėmelis nesimaišytų su tekstu */
+}
+
+/*===========================
+QUOTES STYLES   
+===========================*/
+.quotes {
+    width: 100%;
+    min-height: 100vh;
+    background: radial-gradient(70.52% 37.27% at 24.21% 47.47%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 51.1%, #080A0B 99.74%), url("paveiksleliai/subscribe_background.jpg");
+    background-position: center top;
+    display: flex;
+    align-items: center;
+}
+
+.quotes .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    gap: 50px;
+}
+
+.quotes .container .text {
+    width: calc(45% - 166px);
+    text-align: left;
+    flex-grow: 0;
+}
+
+.quotes .container .text h3 {
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 0;
+}
+
+.quotes .container .text h1 {
+    line-height: 80px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 9px 0px 40px;
+}
+
+.quotes .container .text p {
+    font-weight: 400;
+    line-height: 22px;
+    margin: 0px 0px 40px;
+}
+
+.quotes .container .text a {
+    color: rgba(26, 25, 23, 1);
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 21.79px;
+    letter-spacing: 0px;
+    text-align: center;
+    display: inline-block;
+    padding: 18px 38px 20px 31px;
+    border-radius: 4px;
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+}
+
+.quotes .container .korteles {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(20px, 10vw, 30px);
+}
+
+.quotes .container .korteles .kortele {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    text-align: left;
+    padding: 14px 21px 21px 16px;
+    max-width: clamp(290px, 31vw, 600px);
+}
+
+.quotes .container .korteles .antra_nuotrauka {
+    position: relative;
+    right: 146px;
+}
+
+.quotes .container .korteles .trecia_nuotrauka {
+    position: relative;
+    right: 40px;
+}
+
+.quotes .container .korteles .kortele .top {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.quotes .container .korteles .kortele .top .name {
+    display: flex;
+    flex-direction: column;
+}
+
+.quotes .container .korteles .kortele .top .foto {
+    position: relative;
+}
+
+.quotes .container .korteles .kortele .apskritimas {
+    background: rgba(255, 181, 72, 1);
+    border-radius: 50%;
+    width: 61px;
+    height: 61px;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    z-index: -1;
+}
+
+.quotes .container .korteles .kortele .top .foto img {
+    width: 61px;
+    height: 61px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.quotes .container .korteles .kortele .top .name h3{
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 181, 72, 1);
+    margin: 0;
+}
+
+.quotes .container .korteles .kortele .top .name .platforms {
+    font-weight: 400;
+    line-height: 22px;
+    text-align: justify;  
+    opacity: 50%;
+    margin: 0;
+}
+
+.quotes .container .korteles .kortele .top .twitter {
+    width: 18px;
+    height: 14px;
+    margin: 0px 0px 0px auto;
+}
+
+.quotes .container .korteles .kortele .persons_quote {
+    font-weight: 400;
+    line-height: 24.51px;    
+    margin: 15px 26px 15px 0px;
+}
+
+.quotes .container .korteles .kortele .date {
+    font-weight: 400;
+    line-height: 19.07px;
+    opacity: 50%;
+    margin: 0px;
+}    
+
+/*===========================
+SUBSCRIBE STYLES   
+===========================*/
+.subscribe {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 50px;
+    background: url("paveiksleliai/subscribe_background.jpg");
+    background-position: center bottom;
+}
+
+.subscribe .container .main_subscribe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+}
+
+@media only screen and (max-width: 1015px) {
+    .subscribe .container .main_subscribe {
+        justify-content: center;
+    }
+}
+
+.subscribe .container .main_subscribe picture {
+    width: clamp(30%, 20vw, 50%);
+    background: radial-gradient(45.43% 53.19% at 50% 50%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 46.15%, #080A0B 99.74%);
+    margin: 50px 0px 0px 40px;
+}
+
+.subscribe .container .main_subscribe picture img {
+    width: clamp(150px, 30vw, 420px);
+    padding-top: 50px;
+}
+
+.subscribe .container .main_subscribe .text {
+    width: clamp(50%, 20vw, 70%);
+    text-align: left;
+}
+
+.subscribe .container .main_subscribe .text h3 {
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    margin: 0px 0px 9px;
+    width: fit-content;
+}
+
+.subscribe .container .main_subscribe .text h1 {
+    font-weight: 700;
+    line-height: 80px;
+    letter-spacing: 3px;
+    margin: 0px;
+    width: fit-content;
+}    
+
+.subscribe .container .main_subscribe .text p {
+    font-weight: 400;
+    line-height: 22px;
+    margin: 45px 5px 45px 0px;   
+    width: fit-content;
+}
+
+.subscribe .container .main_subscribe .text .subscribe_now{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1015px) {
+    .subscribe .container .main_subscribe .text .subscribe_now{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.subscribe .container .main_subscribe .text .subscribe_now #ivestis{
+    color: rgba(255, 181, 72, 1);
+    display: flex;
+    width: 100%;
+    gap: 10px;
+}
+
+@media only screen and (max-width: 1015px) {
+    .subscribe .container .main_subscribe .text #ivestis {
+        width: fit-content;;
+    }
+}
+
+.subscribe .main_subscribe #email {
+    flex-grow: 1;
+    background: rgba(255, 255, 255, 0.08);
+    color: rgba(255, 181, 72, 1);
+    border-radius: 5px;
+    padding: 33px 10px 10px 21px;
+    border: none;
+    display: inline-block;
+    width: auto;
+}
+
+.subscribe .main_subscribe ::placeholder {
+    color: rgba(255, 181, 72, 1);
+    font-family: "Open Sans";
+    font-weight: 400;
+    line-height: 24.51px;
+}
+
+.subscribe .main_subscribe label {
+    color: rgba(255, 255, 255, 1);
+    opacity: 50%;
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    line-height: 19.07px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+}
+
+.subscribe .main_subscribe #send {
+    color: rgba(26, 25, 23, 1);
+    background: linear-gradient(194.68deg, #FFB548 11.27%, #F3AF34 90.4%);
+    border-radius: 4px;
+    font-family: "Open Sans", serif;
+    font-weight: 700;
+    line-height: 21.79px;
+    text-align: center;
+    padding: 18px 73px 20px 71px;
+    display: inline-block;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+
+.subscribe .main_subscribe #send:hover {
+    background: linear-gradient(194.68deg, #b77819 11.27%, #F3AF34 90.4%);
+}
+
+.subscribe .container .navigation {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 45px;
+}
+
+.subscribe .container .navigation .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.subscribe .container .navigation .top ul {
+    max-width: 70%;
+}
+
+.subscribe .container .navigation .top .icons {
+    display: flex;
+    justify-content: space-between;
+    gap: 59px;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .navigation .top a:hover {
+    color: rgba(255, 181, 72, 1);
+}
+
+.subscribe .icons #fb,
+.subscribe .icons #twitt,
+.subscribe .icons #youtube,
+.subscribe .icons #twitch {
+    fill: white;
+}
+
+.subscribe .icons #fb:hover,
+.subscribe .icons #twitt:hover,
+.subscribe .icons #youtube:hover,
+.subscribe .icons #twitch:hover {
+    fill: red;
+}
+
+.subscribe .container .navigation .bottom_line {
+    width: 100%;
+    height: 1px;
+    border-radius: 4px;
+    background-color: white;
+    margin: 30px 0px 22px;
+    opacity: 50%;
+}
+
+.subscribe .container .navigation .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.subscribe .container .navigation .bottom p {
+    width: 50%;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    font-family: "Open Sans", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19.07px;
+    opacity: 50%;
+    margin: 0;
+}
+
+.subscribe .container .navigation .bottom #policy {
+    text-align: right;
+    opacity: 100%;
+    text-transform: uppercase;
+}
